@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "GameRule-星野優",
+    "texture": "08df43bf-3177-4319-976d-68ed71f78784",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      800,
+      500
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      800,
+      500
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

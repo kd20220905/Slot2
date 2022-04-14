@@ -13,13 +13,13 @@
         "type": "dock-h",
         "children": [
           {
-            "width": 314,
+            "width": 314.34375,
             "height": 922,
             "type": "dock-v",
             "children": [
               {
-                "width": 314,
-                "height": 468,
+                "width": 314.34375,
+                "height": 467.875,
                 "type": "panel",
                 "active": 0,
                 "children": [
@@ -27,8 +27,8 @@
                 ]
               },
               {
-                "width": 314,
-                "height": 451,
+                "width": 314.34375,
+                "height": 451.125,
                 "type": "panel",
                 "active": 0,
                 "children": [
@@ -38,13 +38,13 @@
             ]
           },
           {
-            "width": 1101,
+            "width": 1228.625,
             "height": 922,
             "type": "dock-v",
             "children": [
               {
-                "width": 1101,
-                "height": 611,
+                "width": 1228.625,
+                "height": 610.703125,
                 "type": "panel",
                 "active": 0,
                 "children": [
@@ -52,10 +52,10 @@
                 ]
               },
               {
-                "width": 1101,
-                "height": 308,
+                "width": 1228.625,
+                "height": 308.296875,
                 "type": "panel",
-                "active": 0,
+                "active": 1,
                 "children": [
                   "console",
                   "timeline",
@@ -65,7 +65,7 @@
             ]
           },
           {
-            "width": 483,
+            "width": 355,
             "height": 922,
             "type": "panel",
             "active": 0,
@@ -87,12 +87,13 @@
         "cocos-services"
       ]
     },
-    " common-asset-worker-worker": {}
+    " common-asset-worker-worker": {},
+    "window-1649926762861": {}
   },
   "panels": {
     "builder": {
-      "x": -1047,
-      "y": 170,
+      "x": 406,
+      "y": 226,
       "width": 516,
       "height": 739
     },

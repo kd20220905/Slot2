@@ -1,7 +1,7 @@
 const { Observable } = require('./observable.cc');
 const Photon = require('./Photon-Javascript_SDK');
 const PhotonController = require('./Photon_Interface');
-
+let PublicSetUp=require('PublicSetUp');
 /**
 @namespace BaseCmdLogic
 處理登入、入局等底層訊息用
@@ -28,9 +28,10 @@ var BaseCmdLogic;
     } //constructor function end
 
     //login
-    MainSrvCmdLogic.prototype.RunLogin = function (account, password) {
+    MainSrvCmdLogic.prototype.RunLogin = function (account, password,type) {
       this._account = account;
       this._password = password;
+      this._type = type;
       this._pi.InitCallbackFunction(this, this.PeerStatusCallback, this.ResponseCallback, this.EventCallback);
       this._pi.connect(); //對main server做連線
     };
@@ -44,7 +45,7 @@ var BaseCmdLogic;
     MainSrvCmdLogic.prototype.PeerStatusCallback = function (st, selfObj) {
       switch (st) {
         case Photon.PhotonPeer.StatusCodes.connect: //已經連上 main server
-          selfObj._pi.sendData(101, selfObj._account, selfObj._password, 0, 0, '', 999); //送出帳密
+          selfObj._pi.sendData(101, selfObj._account, selfObj._password, selfObj._type, 0, '', 999); //送出帳密
           break;
       }
     };
@@ -56,6 +57,7 @@ var BaseCmdLogic;
           if (vals[1] == 1) {
             //成功
             //直接等server通知 lobby server 資訊再做連線
+
           } else {
             switch (
               vals[1] //（0：失敗, 2：版本錯誤, 3：維護中, 4:重複登入, 5:之前遊戲局尚未結束 6：沒有進行遊戲的權限（洽客服））
@@ -79,6 +81,7 @@ var BaseCmdLogic;
                 console.log('沒有進行遊戲的權限');
                 break;
             }
+            //cc.director.loadScene('Login');
           }
           break;
       }
@@ -164,6 +167,7 @@ var BaseCmdLogic;
             ////狀態代碼（0：失敗, 1：成功, 2：版本錯誤, 3：維護中）
             //加入遊戲局（this._gameid）
             selfObj._pi.sendData(103, selfObj._gameid, -1, -1, selfObj._versioncode);
+
           } else {
             switch (vals[1]) {
               case 0:
@@ -176,6 +180,7 @@ var BaseCmdLogic;
                 console.log('LB Srv 維護中');
                 break;
             }
+
           }
           break;
 
@@ -187,6 +192,7 @@ var BaseCmdLogic;
           //vals[5]:result
           if (vals[5] == 1) {
             selfObj._gameSrvObj.ConnectToServer(vals[1], vals[2], selfObj._protocolType, vals[3], vals[4]);
+
           } else {
             switch (
               vals[5] //0：錯誤 1：成功 2:遊戲維護中 3:版本錯誤
@@ -201,6 +207,7 @@ var BaseCmdLogic;
                 console.log('要求加入Game Srv 版本錯誤');
                 break;
             }
+
           }
           break;
 
@@ -227,6 +234,7 @@ var BaseCmdLogic;
                 console.log('此玩家之前遊戲局未結束');
                 break;
             }
+
           }
           break;
       }

@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "底層-FreeSpins",
+    "texture": "0b1f5db0-8787-4278-a75d-99a76db349ce",
+    "atlas": "",
+    "rect": [
+      2,
+      12,
+      905,
+      104
+    ],
+    "offset": [
+      0,
+      1
+    ],
+    "originalSize": [
+      909,
+      130
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

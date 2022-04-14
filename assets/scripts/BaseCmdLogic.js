@@ -81,7 +81,7 @@ var BaseCmdLogic;
                 console.log('沒有進行遊戲的權限');
                 break;
             }
-            //cc.director.loadScene('Login');
+
           }
           break;
       }

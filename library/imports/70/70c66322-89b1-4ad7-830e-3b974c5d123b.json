@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "底層-啟動",
+    "texture": "52e939d4-b912-4a44-9dbd-6067a6e3426c",
+    "atlas": "",
+    "rect": [
+      1,
+      1,
+      119,
+      119
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      121,
+      121
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

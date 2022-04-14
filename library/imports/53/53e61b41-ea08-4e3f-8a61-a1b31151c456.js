@@ -52,8 +52,6 @@ var requestGameResult = function () {
   }
 
   return function requestGameResult() {
-    var _cc$store;
-
     var cols = cc.find('Canvas/Game/Machine/Performance/Cols');
     setRedist(cols, 'redist', 0);
     setRedist(cols, 'redist2', 0); // coGroup.start(function* () {
@@ -93,8 +91,19 @@ var requestGameResult = function () {
     //   }
     // });
 
-    cc.store.gameResultGotStatus = 1;
-    (_cc$store = cc.store) == null ? void 0 : _cc$store.gameServer.GetPI().sendData(3162, cc.store.currentBet);
+    cc.store.gameResultGotStatus = 1; //const {type} = cc.store.gameResult;
+
+    if (cc.store.type == 0) {
+      var _cc$store;
+
+      (_cc$store = cc.store) == null ? void 0 : _cc$store.gameServer.GetPI().sendData(3162, cc.store.currentBet);
+    } else {
+      var _cc$store2;
+
+      (_cc$store2 = cc.store) == null ? void 0 : _cc$store2.gameServer.GetPI().sendData(3162, 0);
+    }
+
+    cc.find('Canvas/Game/Machine/UI/GamePoint/Value').getComponent(cc.Label).string = cc.store.userPoints - cc.store.currentBet;
     console.log(3162);
     coGroup.start( /*#__PURE__*/regeneratorRuntime.mark(function _callee2() {
       var colIndex, col, colsBox, byeond;

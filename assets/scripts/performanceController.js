@@ -30,11 +30,12 @@ cc.Class({
         row.getComponent(cc.Sprite).spriteFrame = null;
       }
     }
+   
   },
 
   start() {
-
     
+
     cc.store.symbolDataList = new Array(5);
     cc.store.randomSymbolDataList = new Array(cc.store.symbolDataList.length);
 
@@ -94,9 +95,8 @@ cc.Class({
         }
         buildSymbols(symbolDataList);
 
-
+        
         yield co.waitUntil(() => cc.store.playing === true);
-        //yield freeSpinAnim();
 
         requestGameResult();
         
@@ -105,6 +105,13 @@ cc.Class({
         requestTableInfo();
 
         if (cc.store.playing === true) {
+          if(cc.store.auto==false){
+            cc.store.playing=false;
+            const AutoPlayButton = cc.find('Canvas/Game/Machine/UI/playButton');
+            AutoPlayButton.active = true;
+            const ManuaPlayButton = cc.find('Canvas/Game/Machine/UI/PauseButton');
+            ManuaPlayButton.active = false;
+          }
           yield co.waitForSeconds(1.2);
         }
       }

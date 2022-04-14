@@ -35,6 +35,8 @@ cc.Class({
       currentBet: 0,
       freeGameCnts: 0,
       FreeTotalPoint: 0,
+      Heart: 0,
+      VideoIdx: 0,
       soundEnabled: true,
       gameResult: {},
       gameResultGotStatus: 0,
@@ -42,6 +44,7 @@ cc.Class({
         return cc.store.gameResultGotStatus === 3;
       },
       playing: false,
+      auto: false,
       canPlay: function canPlay() {
         return true;
       },
@@ -57,7 +60,6 @@ cc.Class({
         bundle.preloadDir('./', cc.VideoClip);
       }
     });
-    console.log(PublicSetUp.account);
     cc.find('Canvas/Game').active = false;
     var getUrlString = location.href;
     var url = new URL(getUrlString);

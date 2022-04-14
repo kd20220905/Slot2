@@ -103,8 +103,7 @@ var BaseCmdLogic;
               case 6:
                 console.log('沒有進行遊戲的權限');
                 break;
-            } //cc.director.loadScene('Login');
-
+            }
           }
 
           break;

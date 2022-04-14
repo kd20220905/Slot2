@@ -9,6 +9,8 @@ exports["default"] = void 0;
 
 var _co = _interopRequireDefault(require("./co.cc"));
 
+var _sound = _interopRequireDefault(require("./sound"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 var PublicSetUp = require('PublicSetUp');
@@ -22,9 +24,11 @@ var playVideo = function () {
     player.enabled = false;
     player.clip = null;
     playing = false;
+    cc.find('Canvas/Game/Machine/VideoFrame').active = false;
+    cc.find('Canvas/Game/Machine/Particle_coin').active = false;
   }
 
-  return /*#__PURE__*/regeneratorRuntime.mark(function playVideo(name) {
+  return /*#__PURE__*/regeneratorRuntime.mark(function playVideo(name, index) {
     var list, clip, done;
     return regeneratorRuntime.wrap(function playVideo$(_context) {
       while (1) {
@@ -48,8 +52,15 @@ var playVideo = function () {
             videoPlayerNode.on('ready-to-play', function (player) {
               player.enabled = true;
               player.play();
-              cc.audioEngine.playEffect(PublicSetUp.audio1, true);
-              cc.find('Canvas/Game/Machine/Particle_coin').active = true;
+
+              if (PublicSetUp.sound == 1) {
+                cc.audioEngine.playEffect(PublicSetUp.audio1, true);
+              }
+
+              if (index === 0) {
+                cc.find('Canvas/Game/Machine/Particle_coin').active = true;
+              }
+
               cc.find('Canvas/Game/Machine/VideoFrame').active = true;
             });
             videoPlayerNode.on('error', onDone);
@@ -74,6 +85,8 @@ var playVideo = function () {
             if (name === 'random') {
               list = ['LINE_MOVIE_1643105941778', 'LINE_MOVIE_1643105948791'];
               name = list[Math.floor(Math.random() * list.length)];
+            } else if (name === 'index') {
+              name = String(index);
             }
 
             clip = videoBundle.get(name, cc.VideoClip);
