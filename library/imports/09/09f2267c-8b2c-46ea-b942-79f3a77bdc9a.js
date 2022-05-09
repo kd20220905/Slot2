@@ -203,7 +203,6 @@ function playAll() {
           }
 
         case 41:
-          //cc.find('Canvas/Game/Card/ProgressBar').getComponent(cc.ProgressBar).progress = 0.3;
           heartObj = cc.find('Canvas/Game/heartPanel').getComponent("heart");
           heartObj.show(heart);
 
