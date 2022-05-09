@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "上層-JP",
+    "texture": "90c3aba8-3bb9-4a93-af41-8ad6481dc08c",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      257,
+      48
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      257,
+      48
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

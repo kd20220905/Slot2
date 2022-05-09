@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "groove-inside",
+    "texture": "e5454392-c059-4839-9dec-d25bf2b997ce",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      383,
+      30
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      383,
+      30
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

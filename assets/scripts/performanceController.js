@@ -14,7 +14,7 @@ cc.Class({
 
   },
   onLoad() {
-    //cc.audioEngine.playMusic(this.MusicClip, true);
+
     cc.find('Symbols', this.node).active = false;
     cc.find('Effect', this.node).active = false;
     const linesNode = cc.find('Lines', this.node);
@@ -35,7 +35,6 @@ cc.Class({
 
   start() {
     
-
     cc.store.symbolDataList = new Array(5);
     cc.store.randomSymbolDataList = new Array(cc.store.symbolDataList.length);
 
@@ -95,7 +94,7 @@ cc.Class({
         }
         buildSymbols(symbolDataList);
 
-        
+
         yield co.waitUntil(() => cc.store.playing === true);
 
         requestGameResult();
@@ -116,5 +115,13 @@ cc.Class({
         }
       }
     });
-  }
+  },
+  update (dt) {
+    var d=new Date();
+    cc.find("Canvas/Game/Machine/UI/time/txt").getComponent(cc.Label).string=d.getHours()+":"+d.getMinutes()+":"+d.getSeconds();
+
+  },
+
+  
+
 });
