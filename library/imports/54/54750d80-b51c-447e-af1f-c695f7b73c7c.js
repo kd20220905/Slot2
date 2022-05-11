@@ -69,7 +69,8 @@ var handleGameCommand = function () {
       case 3075:
         //　jackpot點數
         cc.store.cardPot = vals[1];
-        cc.find('Canvas/Game/Machine/UI/GameJP/Value').getComponent(cc.Label).string = cc.store.cardPot;
+        console.log(Math.floor(cc.store.cardPot * 100) / 100);
+        cc.find('Canvas/Game/Machine/UI/GameJP/Value').getComponent(cc.Label).string = Math.floor(cc.store.cardPot * 100) / 100;
         break;
 
       case 3076:
