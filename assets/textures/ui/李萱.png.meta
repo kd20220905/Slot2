@@ -1,0 +1,38 @@
+{
+  "ver": "2.3.7",
+  "uuid": "3038e67c-e311-4e1f-a57f-a7faf8db8f97",
+  "importer": "texture",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "genMipmaps": false,
+  "packable": true,
+  "width": 560,
+  "height": 800,
+  "platformSettings": {},
+  "subMetas": {
+    "李萱": {
+      "ver": "1.0.6",
+      "uuid": "eecc1289-90b8-4bd3-a579-53319c7df237",
+      "importer": "sprite-frame",
+      "rawTextureUuid": "3038e67c-e311-4e1f-a57f-a7faf8db8f97",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0.5,
+      "offsetY": -0.5,
+      "trimX": 4,
+      "trimY": 6,
+      "width": 553,
+      "height": 789,
+      "rawWidth": 560,
+      "rawHeight": 800,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

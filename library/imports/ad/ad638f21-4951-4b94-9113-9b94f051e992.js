@@ -17,7 +17,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "d
 
 function connectToServer(serverHost, serverPort, account, password, type) {
   var mainServer = new _BaseCmdLogic.MainSrvCmdLogic(new _Photon_Interface["default"].PhotonIf('Ws', serverHost + ":" + serverPort));
-  var lobbyServer = new _BaseCmdLogic.LobbySrvCmdLogic(101, 1);
+  var lobbyServer = new _BaseCmdLogic.LobbySrvCmdLogic(102, 1);
   var gameServer = new _BaseCmdLogic.GameSrvBaseCmdLogic({});
   mainServer.SetLbSrvCmdLogicObj(lobbyServer);
   lobbyServer.SetGameSrvCmdLogicObj(gameServer);

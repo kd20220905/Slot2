@@ -4,7 +4,7 @@ import PhotonController from './Photon_Interface';
 
 export default function connectToServer(serverHost, serverPort, account, password,type) {
   const mainServer = new MainSrvCmdLogic(new PhotonController.PhotonIf('Ws', `${serverHost}:${serverPort}`));
-  const lobbyServer = new LobbySrvCmdLogic(101, 1);
+  const lobbyServer = new LobbySrvCmdLogic(102, 1);
   const gameServer = new GameSrvBaseCmdLogic({});
 
   mainServer.SetLbSrvCmdLogicObj(lobbyServer);
