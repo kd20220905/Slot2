@@ -33,20 +33,18 @@ cc.Class({
     start () {
         self=this;
         cc.find('Canvas/Game/score/1').active=false;
-        cc.find('Canvas/Game/score/2').active=false;
-        cc.find('Canvas/Game/score/3').active=false;
+        
     },
 
-    run(num,score){
+    run(score){
 
-        let scoreLab = cc.find('Canvas/Game/score/'+num);
+        let scoreLab = cc.find('Canvas/Game/score/1');
         scoreLab.getComponent(cc.Label).string="+"+score;
-        scoreLab.active=true;
         cc.tween(scoreLab)
-            //.call(() => {  })
+            .call(() => { scoreLab.active=true; })
             .to(0,{position:cc.v2(-100,130)})
             .to(1,{position:cc.v2(-100,245)})
-            .delay(1)
+            .delay(0.5)
             .call(() => { scoreLab.active=false; })
             .start()
     },
