@@ -13,13 +13,13 @@
         "type": "dock-h",
         "children": [
           {
-            "width": 205.71875,
-            "height": 938,
+            "width": 204,
+            "height": 922,
             "type": "dock-v",
             "children": [
               {
-                "width": 205.71875,
-                "height": 466.984375,
+                "width": 204,
+                "height": 459,
                 "type": "panel",
                 "active": 0,
                 "children": [
@@ -27,8 +27,8 @@
                 ]
               },
               {
-                "width": 205.71875,
-                "height": 468.015625,
+                "width": 204,
+                "height": 460,
                 "type": "panel",
                 "active": 0,
                 "children": [
@@ -38,13 +38,13 @@
             ]
           },
           {
-            "width": 1154.640625,
-            "height": 938,
+            "width": 1144.984375,
+            "height": 922,
             "type": "dock-v",
             "children": [
               {
-                "width": 1154.640625,
-                "height": 663.34375,
+                "width": 1144.984375,
+                "height": 652,
                 "type": "panel",
                 "active": 0,
                 "children": [
@@ -52,8 +52,8 @@
                 ]
               },
               {
-                "width": 1154.640625,
-                "height": 271.65625,
+                "width": 1144.984375,
+                "height": 267,
                 "type": "panel",
                 "active": 1,
                 "children": [
@@ -65,8 +65,8 @@
             ]
           },
           {
-            "width": 553.625,
-            "height": 938,
+            "width": 549,
+            "height": 922,
             "type": "panel",
             "active": 0,
             "children": [
@@ -87,7 +87,8 @@
         "cocos-services"
       ]
     },
-    " common-asset-worker-worker": {}
+    " common-asset-worker-worker": {},
+    "window-1654577240361": {}
   },
   "panels": {
     "builder": {
