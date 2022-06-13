@@ -20,7 +20,6 @@ cc.Class({
 
   onLoad() {
     // co.enableAutoTick(30);
-    document.oncontextmenu = new Function("return false");
     for (let i = 0; i < this.AudioClip.length; i++) {
       PublicSetUp.audio[this.AudioClip[i].name] = this.AudioClip[i];
   }
@@ -60,6 +59,7 @@ cc.Class({
   },
 
   start() {
+    document.oncontextmenu = new Function("return false");
     cc.audioEngine.playMusic(this.MusicClip, true);
 
     cc.assetManager.loadBundle('mp4', (error, bundle) => {

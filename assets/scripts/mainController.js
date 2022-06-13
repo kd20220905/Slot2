@@ -46,6 +46,7 @@ cc.Class({
 
       playing: false,
       auto:false,
+      test:0,
       canPlay() {
         return true;
       },

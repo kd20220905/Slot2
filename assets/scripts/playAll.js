@@ -172,6 +172,9 @@ if(PublicSetUp.sound==1){
       }
     }
 
+    if(cc.store.userPoints<cc.store.currentBet){
+      cc.store.auto=false;
+    }
 
 
   cc.find('Canvas/Game/Machine/UI/GameScore/Value').getComponent(cc.Label).string = 0;
