@@ -12,7 +12,7 @@ const handleGameCommand = (function () {
           first3072 = false;
 
           cc.store.userPoints = vals[4];
-          cc.store.userPoints=9
+          
           cc.find('Canvas/Game/Machine/UI/GamePoint/Value').getComponent(cc.Label).string = Math.floor(cc.store.userPoints);
           
           cc.store.maxBet = vals[2];

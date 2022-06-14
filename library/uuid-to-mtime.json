@@ -5,13 +5,13 @@
     "relativePath": "mp4"
   },
   "183d4432-5260-480a-8bad-0912feb802ac": {
-    "asset": 1654576976031,
-    "meta": 1654849617586,
+    "asset": 1655107710232,
+    "meta": 1655181738646,
     "relativePath": "scripts"
   },
   "c038ecb8-94b6-4688-bf41-aa9028c6b400": {
-    "asset": 1652412523259,
-    "meta": 1652412700450,
+    "asset": 1655107419461,
+    "meta": 1655181738647,
     "relativePath": "textures"
   },
   "4af37c62-9919-459e-aaaa-7d9b2fa80eee": {
@@ -860,8 +860,8 @@
     "relativePath": "textures\\lines\\slot line-01.png"
   },
   "5227d1a1-69e2-425b-b7ae-953c7343578f": {
-    "asset": 1652412518921,
-    "meta": 1652412700446,
+    "asset": 1655107360196,
+    "meta": 1655181738645,
     "relativePath": "Prefab"
   },
   "8b9ae639-61b8-4c67-b7d4-904a4210f8e5": {
@@ -1746,7 +1746,7 @@
   },
   "954fec8b-cd16-4bb9-a3b7-7719660e7558": {
     "asset": 1648709211093,
-    "meta": 1655107325963,
+    "meta": 1655181737069,
     "relativePath": "model\\primitives.fbx"
   },
   "633ee225-5169-45cc-aa1a-68317d1aba2d": {
@@ -1855,8 +1855,8 @@
     "relativePath": "scripts\\maxBetButton.js"
   },
   "54750d80-b51c-447e-af1f-c695f7b73c7c": {
-    "asset": 1655108033620,
-    "meta": 1655108035491,
+    "asset": 1655181769016,
+    "meta": 1655181784408,
     "relativePath": "scripts\\handleGameCommand.js"
   }
 }
