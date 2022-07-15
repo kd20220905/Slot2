@@ -12,8 +12,9 @@ const handleGameCommand = (function () {
           first3072 = false;
 
           cc.store.userPoints = vals[4];
+          
           cc.find('Canvas/Game/Machine/UI/GamePoint/Value').getComponent(cc.Label).string = Math.floor(cc.store.userPoints);
-
+          
           cc.store.maxBet = vals[2];
           cc.store.minBet = cc.store.currentBet = vals[3];
           cc.store.gameResult.iGrid = vals[8];
@@ -30,6 +31,8 @@ const handleGameCommand = (function () {
 
           cc.find('Canvas/Game').active = true;
         }
+
+        
         cc.store.freeGameCnts = vals[9];
         break;
 
